@@ -1,40 +1,49 @@
-# Saad Designer — Portfólio
+# Saad Designer | Portfólio
 
-Portfólio de página única para apresentar os trabalhos de design gráfico e audiovisual de Saad. Construído com HTML, CSS e JavaScript nativos, sem build step ou dependências de interface.
+Portfólio de página única para apresentar os trabalhos de design gráfico, identidade visual e audiovisual. A página atual usa HTML, CSS e JavaScript nativos, sem etapa de build.
+
+## Estrutura do projeto
+
+```
+.
+├── index.html
+├── media/
+│   ├── README.md
+│   ├── profile/
+│   ├── videos/
+│   ├── design/
+│   └── identities/
+└── README.md
+```
+
+As pastas de mídia já estão versionadas no GitHub. Adicione os arquivos reais dentro delas.
 
 ## Como visualizar
-Abra `index.html` no navegador ou publique o repositório com GitHub Pages. As fontes Manrope e DM Mono são carregadas do Google Fonts; se estiver offline, entram fontes de sistema como alternativa.
+
+Abra `index.html` no navegador ou publique a página com GitHub Pages. Para trabalhar pelo Lovable, conecte este repositório à sua conta e confirme a estrutura que o Lovable importar antes de publicar.
 
 ## Personalizar o conteúdo
-Todo o conteúdo editável fica no bloco de configuração e dados do portfólio, no fim de `index.html`.
 
-- **Foto de perfil:** coloque a foto em `public/media/profile/saad.jpg` e defina `PROFILE_IMAGE: "/media/profile/saad.jpg"` em `CONFIG`. Se preferir, use outro caminho.
-- **Vídeos:** edite o array `videos`. Cada item aceita `title`, `category`, `cover`, `video` e `description`. Use caminhos como `/media/videos/projeto-01.webp` e `/media/videos/projeto-01.mp4`.
-- **Artes:** edite o array `designs`. Cada item aceita `title`, `category` e `image`. Os carrosséis mantêm a proporção das artes e permitem abrir uma visualização ampliada.
-- **Identidades visuais:** adicione itens reais ao array `identities`, com `name`, `description`, `logoImage` opcional e `colors` opcional. A seção não exibe marcas fictícias como trabalhos reais.
-- **WhatsApp:** preencha `WHATSAPP_NUMBER` com código do país, DDD e número, somente dígitos, por exemplo o formato `55DDDNÚMERO`. Não deixe o valor de exemplo no código.
-- **Instagram:** o link está centralizado em `CONFIG.INSTAGRAM_URL`; atualize também os links visíveis no HTML se trocar o perfil.
+Os textos, links e dados dos projetos ficam no bloco de configuração e nos arrays no final de `index.html`.
 
-## Estrutura de mídia sugerida
-```
-public/
-  media/
-    profile/
-    videos/
-    design/
-    identities/
-```
-Crie essas pastas ao adicionar arquivos. Os placeholders atuais são gráficos de interface e estão identificados como conteúdo a substituir, não são projetos reais.
+- **Foto de perfil:** adicione `media/profile/saad.jpg` e configure `PROFILE_IMAGE` com o caminho correspondente.
+- **Vídeos:** adicione arquivos e capas em `media/videos/`, depois atualize o array `videos` com `title`, `category`, `cover`, `video` e `description`.
+- **Design gráfico:** adicione as imagens em `media/design/` e atualize o array `designs`.
+- **Identidades visuais:** adicione logos e aplicações em `media/identities/` e atualize o array `identities`.
+- **WhatsApp:** configure `WHATSAPP_NUMBER` com código do país, DDD e número, somente dígitos.
+- **Instagram:** atualize `CONFIG.INSTAGRAM_URL` e os links visíveis correspondentes.
 
-## Recursos incluídos
-- Layout responsivo mobile-first.
-- Navegação por seções e barra inferior em telas pequenas.
-- Oito posições de audiovisual com prévia silenciosa sob demanda quando houver vídeo configurado.
-- Dez posições de design com carrossel horizontal e abertura ampliada.
-- Seção independente e flexível para identidades visuais.
+Use caminhos consistentes com o local onde o site será publicado. Em GitHub Pages, um site publicado em uma URL de projeto pode precisar de caminhos relativos em vez de caminhos iniciados por `/`.
+
+## Recursos atuais
+
+- Layout responsivo.
+- Navegação por seções e navegação inferior em telas pequenas.
+- Grade de projetos audiovisuais com prévia sob demanda quando um vídeo estiver configurado.
+- Carrossel de design gráfico com visualização ampliada.
+- Seção para identidades visuais reais.
 - Modal com fechamento por botão, clique fora e tecla Escape.
-- Respeito a `prefers-reduced-motion` e preferência de economia de dados para prévias.
-- Link de WhatsApp preparado sem inventar telefone.
+- Respeito à preferência por movimento reduzido.
+- Link de WhatsApp preparado para ser configurado.
 
-## Observação
-O repositório não continha uma aplicação front-end reconhecível nos caminhos convencionais quando foi inspecionado. A implementação foi criada como página estática para reduzir dependências e permitir publicação direta.
+Os espaços visuais de demonstração são placeholders, não trabalhos reais. Substitua-os pelos projetos e materiais autorizados antes de divulgar o portfólio.
