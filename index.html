@@ -3,383 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1118">
-  <meta name="description" content="Saad Designer. Design gráfico, audiovisual e estratégia visual para marcas. Portfólio de design e videomaker em Luziânia, Goiás, DF e Entorno.">
-  <title>Saad Designer — Design, vídeo e direção visual</title>
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="Tudo para cuidar bem de quem deixa seus dias mais felizes. Conheça a loja Pata & Pelo.">
+  <title>Pata & Pelo | Cuidado que vira carinho</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--bg:#0b1118;--surface:#151f29;--raised:#1c2935;--text:#f1f5f8;--muted:#a8b5c1;--cyan:#72e5ff;--line:#293846;--max:1160px;--radius:18px}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:radial-gradient(#8297a7 .55px,transparent .55px);background-size:7px 7px;mask-image:linear-gradient(to bottom,black,transparent 75%);z-index:-1}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
-    img,video{display:block;max-width:100%}
-    .shell{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
-    .topbar{position:sticky;top:0;z-index:20;background:rgba(11,17,24,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(41,56,70,.75)}
-    .topbar-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .wordmark{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:-.04em}
-    .mark{width:28px;height:28px;border:1px solid var(--cyan);display:grid;place-items:center;border-radius:9px;color:var(--cyan);font-size:12px;letter-spacing:-.08em}
-    .nav{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:12px;font-weight:700}
-    .nav a{transition:color .2s ease}.nav a:hover,.nav a[aria-current=location]{color:var(--text)}
-    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;transition:transform .2s,border-color .2s,background .2s}
-    .nav-cta{border-color:var(--cyan);color:var(--cyan)}
-    .button.primary{background:var(--cyan);border-color:var(--cyan);color:#071118}
-    .button:hover,.nav-cta:hover{transform:translateY(-2px);border-color:var(--cyan)}
-    .button.secondary:hover{background:var(--raised)}
-    .icon{width:16px;height:16px;flex:none}
-    main{padding-bottom:60px}
-    .profile{padding:62px 0 43px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;align-items:center}
-    .avatar-wrap{position:relative;width:142px;height:142px}
-    .avatar{width:100%;height:100%;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;overflow:hidden;color:var(--muted);text-align:center;font-size:11px;line-height:1.5}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    .status-dot{position:absolute;right:7px;bottom:8px;width:17px;height:17px;border:4px solid var(--bg);background:var(--cyan);border-radius:50%}
-    .profile-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
-    h1{font-size:clamp(27px,4vw,39px);line-height:1.12;letter-spacing:-.065em;margin:0;font-weight:800}
-    .verified{width:17px;height:17px;color:var(--cyan)}
-    .handle{font-family:"DM Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.01em}
-    .role{margin:10px 0 8px;font-weight:700;font-size:13px}
-    .bio{max-width:570px;margin:0;color:var(--muted);font-size:14px}
-    .profile-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:15px;color:var(--muted);font-size:11px}
-    .profile-meta span{display:inline-flex;align-items:center;gap:7px}
-    .profile-meta svg{color:var(--cyan);width:14px;height:14px}
-    .profile-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}
-    .stats{display:flex;align-items:center;gap:24px;padding:17px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:45px}
-    .stat{display:flex;align-items:baseline;gap:7px;font-size:12px;color:var(--muted)}
-    .stat strong{color:var(--text);font-size:16px;letter-spacing:-.04em}
-    .stat-label{font-family:"DM Mono",monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-    .section{margin-top:52px;scroll-margin-top:90px}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}
-    .eyebrow{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-size:10px;margin:0 0 6px}
-    h2{font-size:clamp(22px,3vw,30px);letter-spacing:-.055em;line-height:1.2;margin:0;font-weight:800}
-    .section-note{color:var(--muted);font-size:11px;margin:7px 0 0}
-    .counter{font-family:"DM Mono",monospace;font-size:10px;color:var(--muted);white-space:nowrap}
-    .video-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .video-card{min-width:0}
-    .media-tile{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:13px;border:1px solid var(--line);background:var(--surface);isolation:isolate}
-    .media-tile::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(4,9,14,.8));z-index:1;pointer-events:none}
-    .media-tile video,.media-tile img{width:100%;height:100%;object-fit:cover}
-    .placeholder-art{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:15px;background:radial-gradient(ellipse at 75% 22%,rgba(114,229,255,.13),transparent 40%),linear-gradient(145deg,#1c2935,#101821 75%);overflow:hidden}
-    .placeholder-art::before{content:"";position:absolute;width:170%;aspect-ratio:1;border:1px solid rgba(114,229,255,.18);border-radius:50%;left:-55%;top:18%;transform:rotate(-25deg)}
-    .placeholder-art::after{content:"";position:absolute;width:110%;aspect-ratio:1;border:1px solid rgba(114,229,255,.12);border-radius:50%;left:-20%;top:34%}
-    .placeholder-top,.placeholder-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;gap:8px}
-    .placeholder-top{font:9px "DM Mono",monospace;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em}
-    .placeholder-word{position:absolute;z-index:1;left:12px;right:10px;top:42%;transform:translateY(-50%);font-size:clamp(20px,3vw,38px);line-height:.95;font-weight:800;letter-spacing:-.09em;text-transform:uppercase;overflow-wrap:anywhere}
-    .placeholder-bottom{font:9px "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-    .tile-open{position:absolute;z-index:3;inset:0;border:0;background:transparent;color:white;cursor:pointer;text-align:left;padding:0}
-    .play-chip{position:absolute;z-index:2;top:12px;right:12px;width:34px;height:34px;border:1px solid rgba(255,255,255,.4);border-radius:50%;display:grid;place-items:center;background:rgba(11,17,24,.45);backdrop-filter:blur(8px)}
-    .play-chip svg{width:14px;height:14px}
-    .video-info{padding:10px 2px 0}
-    .video-title{font-size:12px;font-weight:800;line-height:1.4;margin:0}
-    .video-category{font:9px "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
-    .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,24%);gap:14px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--line) transparent;overscroll-behavior-x:contain}
-    .design-card{scroll-snap-align:start;min-width:0}
-    .design-image{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:var(--surface);cursor:zoom-in;padding:0;width:100%;color:var(--text);text-align:left}
-    .design-image img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
-    .design-image:hover img{transform:scale(1.035)}
-    .design-placeholder{height:100%;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;padding:16px;background:linear-gradient(150deg,#1c2935,#101820);position:relative;overflow:hidden}
-    .design-placeholder::before{content:"";position:absolute;width:150%;aspect-ratio:1;border:1px solid rgba(114,229,255,.22);border-radius:50%;right:-80%;top:-5%}
-    .design-placeholder .big{font-size:clamp(23px,3vw,40px);line-height:.9;letter-spacing:-.09em;font-weight:800;position:relative;max-width:220px;text-transform:uppercase}
-    .design-placeholder .small{font:9px "DM Mono",monospace;color:var(--cyan);letter-spacing:.13em;text-transform:uppercase;position:relative}
-    .design-placeholder .index{font:10px "DM Mono",monospace;color:var(--muted);position:relative}
-    .design-meta{padding:10px 2px 0}
-    .design-meta strong{font-size:12px}
-    .design-meta p{margin:2px 0 0;font-size:10px;color:var(--muted)}
-    .rail-controls{display:flex;align-items:center;gap:8px}
-    .round-control{width:34px;height:34px;border:1px solid var(--line);background:transparent;border-radius:50%;display:grid;place-items:center;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s}
-    .round-control:hover{border-color:var(--cyan);background:var(--surface)}
-    .round-control:disabled{opacity:.3;cursor:not-allowed}
-    .identity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .identity-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);display:grid;grid-template-columns:1fr 1fr;min-height:220px}
-    .identity-visual{position:relative;display:grid;place-items:center;padding:20px;background:linear-gradient(140deg,#202f3b,#101820);overflow:hidden;min-width:0}
-    .identity-visual::before{content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(114,229,255,.2);border-radius:50%}
-    .identity-logo{position:relative;text-align:center;font-size:clamp(19px,3vw,34px);font-weight:800;line-height:.95;letter-spacing:-.08em;overflow-wrap:anywhere}
-    .identity-logo small{display:block;font:8px "DM Mono",monospace;letter-spacing:.2em;color:var(--cyan);margin-top:10px}
-    .identity-details{padding:20px 18px;display:flex;flex-direction:column;justify-content:center}
-    .identity-details .number{font:9px "DM Mono",monospace;color:var(--cyan);letter-spacing:.1em}
-    .identity-details h3{font-size:15px;letter-spacing:-.04em;margin:9px 0 7px}
-    .identity-details p{font-size:11px;color:var(--muted);margin:0}
-    .palette{display:flex;gap:5px;margin-top:17px}
-    .swatch{width:18px;height:18px;border-radius:50%;border:1px solid rgba(255,255,255,.15)}
-    .identity-placeholder{border:1px dashed #3b5262;border-radius:16px;padding:23px;display:flex;flex-direction:column;justify-content:space-between;min-height:160px;color:var(--muted);background:rgba(21,31,41,.35)}
-    .identity-placeholder strong{font-size:15px;color:var(--text);letter-spacing:-.04em}
-    .identity-placeholder p{font-size:11px;margin:7px 0 0;max-width:290px}
-    .identity-placeholder .plus{font-size:25px;color:var(--cyan);font-weight:400}
-    .contact{margin-top:80px;border:1px solid var(--line);border-radius:22px;padding:clamp(25px,6vw,58px);position:relative;overflow:hidden;background:radial-gradient(ellipse at 100% 0%,rgba(114,229,255,.09),transparent 45%),var(--surface)}
-    .contact::after{content:"S";position:absolute;right:4%;bottom:-.48em;font-size:clamp(180px,28vw,330px);line-height:1;font-weight:800;letter-spacing:-.13em;color:rgba(241,245,248,.025);pointer-events:none}
-    .contact-content{position:relative;z-index:1;max-width:630px}
-    .contact h2{font-size:clamp(35px,6vw,64px);letter-spacing:-.075em;max-width:560px}
-    .contact-copy{color:var(--muted);font-size:14px;margin:14px 0 24px}
-    .contact-links{display:flex;gap:10px;flex-wrap:wrap}
-    .footer{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:25px 0 10px;color:var(--muted);font-size:10px}
-    .footer .wordmark{color:var(--text)}
-    .footer-note{font-family:"DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;font-size:9px}
-    .modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(2,6,10,.88);backdrop-filter:blur(14px)}
-    .modal.open{display:flex}
-    .modal-panel{width:min(100%,960px);max-height:min(90dvh,900px);overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--bg);position:relative}
-    .modal-close{position:sticky;top:12px;margin:12px 12px -46px auto;z-index:3;width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:rgba(11,17,24,.88);color:var(--text);cursor:pointer}
-    .modal-media{min-height:250px;max-height:72dvh;display:grid;place-items:center;background:#070b10;overflow:hidden}
-    .modal-media img,.modal-media video{max-width:100%;max-height:72dvh;object-fit:contain}
-    .modal-placeholder{min-height:360px;width:100%;display:grid;place-items:center;padding:35px;text-align:center;background:radial-gradient(ellipse at center,rgba(114,229,255,.1),transparent 60%),#101820}
-    .modal-placeholder strong{display:block;font-size:clamp(30px,7vw,70px);letter-spacing:-.08em;line-height:1}
-    .modal-placeholder p{font:10px "DM Mono",monospace;color:var(--cyan);text-transform:uppercase;letter-spacing:.14em}
-    .modal-caption{padding:20px 24px 24px}
-    .modal-caption h3{margin:0;font-size:20px;letter-spacing:-.05em}
-    .modal-caption p{margin:5px 0 0;color:var(--muted);font-size:12px}
-    .toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);padding:10px 15px;border:1px solid var(--line);background:var(--raised);border-radius:999px;font-size:11px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:70}
-    .toast.show{opacity:1;transform:translate(-50%,0)}
-    .mobile-nav{display:none}
-    @media(min-width:1200px){.profile{padding-top:72px}.video-grid{gap:18px}.rail{grid-auto-columns:minmax(200px,22%)}}
-    @media(max-width:760px){.shell{width:min(calc(100% - 30px),var(--max))}.topbar-inner{height:60px}.nav{gap:15px}.nav a{font-size:11px}.nav .nav-optional{display:none}.nav-cta{padding:8px 12px}.profile{grid-template-columns:100px minmax(0,1fr);gap:18px;padding:38px 0 28px;align-items:start}.avatar-wrap{width:94px;height:94px}.profile-top{gap:7px}h1{font-size:27px}.bio{font-size:12px}.role{font-size:12px;margin-top:8px}.profile-meta{gap:9px 15px;margin-top:12px}.profile-actions{margin-top:14px}.profile-actions .button{padding:9px 12px}.stats{gap:15px;margin-bottom:34px}.stat{display:block}.stat strong{display:block}.stat-label{font-size:8px}.section{margin-top:42px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 11px}.media-tile{border-radius:11px}.placeholder-art{padding:11px}.placeholder-word{left:10px;font-size:clamp(24px,7vw,38px)}.video-info{padding-top:8px}.rail{grid-auto-columns:minmax(160px,44%);gap:11px}.identity-grid{grid-template-columns:1fr}.identity-card{min-height:190px}.contact{margin-top:58px;border-radius:17px}.footer{padding-bottom:78px}.mobile-nav{position:fixed;display:flex;z-index:25;bottom:0;left:0;right:0;padding:9px max(15px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(15px,env(safe-area-inset-left));justify-content:space-around;gap:8px;background:rgba(11,17,24,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line)}.mobile-nav a{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);font-size:9px;min-width:48px}.mobile-nav a svg{width:17px;height:17px}.mobile-nav a:hover,.mobile-nav a[aria-current=location]{color:var(--cyan)}}
-    @media(max-width:430px){.shell{width:calc(100% - 26px)}.profile{grid-template-columns:78px minmax(0,1fr);gap:13px}.avatar-wrap{width:76px;height:76px}.status-dot{width:14px;height:14px;right:3px;bottom:3px;border-width:3px}.profile-top{align-items:center}.profile-top h1{font-size:24px}.verified{width:14px;height:14px}.handle{font-size:10px}.bio{font-size:11px}.profile-meta{font-size:10px;gap:7px 11px}.profile-actions{gap:7px}.profile-actions .button{font-size:10px;padding:8px 10px}.stats{justify-content:space-between;gap:8px}.stat strong{font-size:15px}.section-head{align-items:center}.section-note{font-size:10px}.counter{font-size:9px}.rail{grid-auto-columns:minmax(145px,46%)}.identity-card{grid-template-columns:.95fr 1.05fr}.identity-visual{padding:12px}.identity-details{padding:15px 12px}.identity-details h3{font-size:13px}.identity-details p{font-size:10px}.contact h2{font-size:38px}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/products.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="shell topbar-inner">
-      <a class="wordmark" href="#inicio" aria-label="Saad Designer, início"><span class="mark">S.</span><span>SAAD DESIGNER</span></a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a><a href="#videos">Vídeos</a><a href="#design">Design</a><a class="nav-optional" href="#identidades">Identidades</a>
-      </nav>
-      <a class="nav-cta" href="#contato">Vamos conversar <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="announcement"><span class="announcement-dot"></span> Um carinho a mais em cada pedido <span class="announcement-separator">✳</span> Frete grátis acima de R$ 149 <span class="announcement-separator">✳</span></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Pata e Pelo, início">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 39c-7.4 0-13-4.5-13-10.4 0-4.6 3.4-7.5 7.2-7.5 2.7 0 4.1 1.8 5.8 1.8s3.1-1.8 5.8-1.8c3.8 0 7.2 2.9 7.2 7.5C37 34.5 31.4 39 24 39Z"/><ellipse cx="11.5" cy="14.5" rx="5.3" ry="7" transform="rotate(-24 11.5 14.5)"/><ellipse cx="23.5" cy="10.5" rx="5.3" ry="7" transform="rotate(-4 23.5 10.5)"/><ellipse cx="35.8" cy="14.5" rx="5.3" ry="7" transform="rotate(24 35.8 14.5)"/></svg></span>
+      <span class="brand-word">pata<span>&</span>pelo<small>pet shop com carinho</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal"><a href="#produtos">Produtos</a><a href="#beneficios">Por que a gente?</a><a href="#sobre">Nossa essência</a></nav>
+    <div class="header-actions">
+      <a class="header-contact" href="#contato">Fale com a gente <span aria-hidden="true">↗</span></a>
+      <button class="cart-button" id="cart-toggle" aria-label="Abrir sacola"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count" id="cart-count">0</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
-
-  <main class="shell" id="inicio">
-    <section class="profile" aria-labelledby="profile-name">
-      <div class="avatar-wrap">
-        <div class="avatar" id="profile-avatar"><span>ADICIONE<br>SUA FOTO</span></div>
-        <span class="status-dot" title="Perfil profissional"></span>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> PARA QUEM FAZ PARTE DA FAMÍLIA</div>
+        <h1>Amor de verdade<br>merece <em>cuidado.</em></h1>
+        <p class="hero-description">Tudo para deixar a rotina do seu melhor amigo mais saudável, feliz e cheia de rabinhos abanando.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#produtos">Encontrar favoritos <span aria-hidden="true">↗</span></a><a class="text-link" href="#sobre">Conheça a Pata & Pelo <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars"><span>🐶</span><span>🐱</span><span>🐾</span></div><p><strong>Feito com carinho.</strong><br>Escolhido pensando neles.</p></div>
+        <span class="hero-scribble" aria-hidden="true">feito de amor ♡</span>
       </div>
-      <div class="profile-copy">
-        <div class="profile-top"><h1 id="profile-name">Saad Designer</h1><svg class="verified" viewBox="0 0 24 24" fill="currentColor" aria-label="Perfil profissional"><path d="M12 2.4 14.7 4l3.1-.1 1.2 2.9 2.6 1.7-.8 3 1 2.9-2.4 2-1 3-3.1-.2L12 21l-2.7-1.7-3.1.1L5 16.5l-2.6-1.7.8-3-1-2.9 2.4-2 1-3 3.1.2L12 2.4Z"/><path d="m8 12 2.5 2.5L16.5 9" fill="none" stroke="#0b1118" stroke-width="1.8"/></svg><span class="handle">@saadcamily</span></div>
-        <p class="role">Designer gráfico &nbsp;·&nbsp; Videomaker</p>
-        <p class="bio">Crio experiências visuais para marcas, unindo design, audiovisual e estratégia de marketing.</p>
-        <div class="profile-meta">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Luziânia, Goiás</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 anos de experiência</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg>Luziânia, DF e Entorno</span>
-        </div>
-        <div class="profile-actions">
-          <a class="button primary" href="#contato"> <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 9.5c.5 2 2 3.5 4 4"/></svg>Falar sobre um projeto</a>
-          <a class="button secondary" href="https://instagram.com/saadcamily" target="_blank" rel="noreferrer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a>
-        </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=85" alt="Cachorro feliz olhando para a câmera" fetchpriority="high"><div class="image-sticker"><span>♡</span><small>SEU PET<br>É NOSSO PET</small></div></div>
+        <div class="hero-note"><span class="note-icon">✳</span><span>Pequenos cuidados.<br><strong>Grandes momentos.</strong></span></div>
+        <span class="hero-sun" aria-hidden="true">✳</span>
       </div>
+      <div class="hero-bottom"><span>01 / CUIDADO DIÁRIO</span><span>DESLIZE PARA DESCOBRIR <span aria-hidden="true">↓</span></span></div>
     </section>
-
-    <div class="stats" aria-label="Resumo do portfólio">
-      <div class="stat"><strong>08</strong><span class="stat-label">Audiovisual</span></div>
-      <div class="stat"><strong>10</strong><span class="stat-label">Designs</span></div>
-      <div class="stat"><strong>∞</strong><span class="stat-label">Ideias por criar</span></div>
-    </div>
-
-    <section class="section" id="videos" aria-labelledby="videos-title">
-      <div class="section-head">
-        <div><p class="eyebrow">01 / Em movimento</p><h2 id="videos-title">Audiovisual</h2><p class="section-note">Captação, direção e edição. Histórias que prendem o olhar.</p></div>
-        <span class="counter">01 — 08</span>
-      </div>
-      <div class="video-grid" id="video-grid"></div>
+    <section class="category-strip" aria-label="Categorias">
+      <a href="#produtos" data-category-link="alimentacao"><span class="category-icon">🥣</span><span>Alimentação</span><span class="category-arrow">↗</span></a>
+      <a href="#produtos" data-category-link="brinquedos"><span class="category-icon">🎾</span><span>Brinquedos</span><span class="category-arrow">↗</span></a>
+      <a href="#produtos" data-category-link="passeio"><span class="category-icon">🦮</span><span>Passeio</span><span class="category-arrow">↗</span></a>
+      <a href="#produtos" data-category-link="higiene"><span class="category-icon">🫧</span><span>Higiene & cuidado</span><span class="category-arrow">↗</span></a>
     </section>
-
-    <section class="section" id="design" aria-labelledby="design-title">
-      <div class="section-head">
-        <div><p class="eyebrow">02 / Composição & ideia</p><h2 id="design-title">Design gráfico</h2><p class="section-note">Peças que unem conceito, clareza e personalidade visual.</p></div>
-        <div class="rail-controls"><span class="counter">01 — 10</span><button class="round-control" data-scroll="design-rail" data-dir="-1" aria-label="Ver artes anteriores"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m15 18-6-6 6-6"/></svg></button><button class="round-control" data-scroll="design-rail" data-dir="1" aria-label="Ver próximas artes"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg></button></div>
-      </div>
-      <div class="rail" id="design-rail" aria-label="Galeria de design gráfico"></div>
+    <section class="products-section section-wrap" id="produtos">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> A SELEÇÃO DA CASA</div><h2>Os queridinhos<br><em>de quatro patas.</em></h2></div><p>Coisas úteis, divertidas e gostosas para fazer o dia deles melhor. E o seu também.</p></div>
+      <div class="product-toolbar"><div class="filter-list" role="group" aria-label="Filtrar produtos"><button class="filter-chip active" data-filter="todos">Todos os produtos</button><button class="filter-chip" data-filter="alimentacao">Alimentação</button><button class="filter-chip" data-filter="brinquedos">Brinquedos</button><button class="filter-chip" data-filter="passeio">Passeio</button><button class="filter-chip" data-filter="higiene">Higiene</button></div><span class="product-total" id="product-total">06 produtos</span></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="products-foot"><span>✳ Selecionados com carinho, sempre.</span><button class="text-link" id="show-all">Ver todos os produtos <span aria-hidden="true">↗</span></button></div>
     </section>
-
-    <section class="section" id="identidades" aria-labelledby="identity-title">
-      <div class="section-head">
-        <div><p class="eyebrow">03 / Sistemas de marca</p><h2 id="identity-title">Identidades visuais</h2><p class="section-note">Marcas pensadas para ter presença em cada ponto de contato.</p></div>
-      </div>
-      <div class="identity-grid" id="identity-grid"></div>
+    <section class="care-banner" id="beneficios">
+      <div class="care-image"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1000&q=85" alt="Pessoa cuidando com carinho de um cachorro" loading="lazy"><span class="photo-caption">CUIDAR TAMBÉM É AMAR.</span></div>
+      <div class="care-copy"><div class="eyebrow"><span class="eyebrow-line"></span> MAIS QUE PRODUTOS</div><h2>O bem-estar deles<br>é o nosso <em>negócio.</em></h2><p>A gente acredita que os melhores momentos são feitos das coisas simples: um passeio sem pressa, uma brincadeira nova e aquele cuidado de todo dia.</p><div class="benefit-list"><div><span class="benefit-icon">♡</span><span><strong>Escolhas com carinho</strong><small>Produtos pensados para a rotina do seu pet.</small></span></div><div><span class="benefit-icon">✳</span><span><strong>Compra sem complicação</strong><small>Uma experiência simples do começo ao fim.</small></span></div><div><span class="benefit-icon">↗</span><span><strong>Atendimento de verdade</strong><small>Precisou de ajuda? Estamos aqui para conversar.</small></span></div></div><a href="#contato" class="button button-light">Vamos conversar <span aria-hidden="true">↗</span></a></div>
     </section>
-
-    <section class="contact" id="contato" aria-labelledby="contact-title">
-      <div class="contact-content">
-        <p class="eyebrow">04 / Seu próximo projeto</p>
-        <h2 id="contact-title">Vamos criar algo memorável?</h2>
-        <p class="contact-copy">Seu próximo projeto pode começar com uma boa conversa.</p>
-        <div class="contact-links">
-          <a class="button primary" id="whatsapp-link" href="#contato"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 9.5c.5 2 2 3.5 4 4"/></svg>Chamar no WhatsApp</a>
-          <a class="button secondary" href="https://instagram.com/saadcamily" target="_blank" rel="noreferrer">Instagram <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer"><a class="wordmark" href="#inicio"><span class="mark">S.</span><span>SAAD DESIGNER</span></a><span class="footer-note">Feito com intenção · Luziânia, GO</span><span>© <span id="year"></span></span></footer>
+    <section class="quote-section" id="sobre"><span class="quote-mark">“</span><p>Para eles, você é o mundo inteiro.<br>Vamos cuidar bem desse <em>mundo.</em></p><div class="quote-signature"><span class="signature-paw">✳</span> com carinho, Pata & Pelo</div><div class="quote-decoration" aria-hidden="true">♡</div></section>
+    <section class="newsletter-section" id="contato"><div class="newsletter-paw">🐾</div><div><div class="eyebrow"><span class="eyebrow-line"></span> UM OI É SEMPRE BEM-VINDO</div><h2>Seu pet tem um pedido?</h2><p>Quer ajuda para escolher? Fale com a gente. Vamos encontrar algo que combine com ele.</p></div><a class="button button-dark" id="contact-button" href="#">Chamar no WhatsApp <span aria-hidden="true">↗</span></a></section>
   </main>
-
-  <nav class="mobile-nav" aria-label="Navegação rápida">
-    <a href="#inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1Z"/></svg>Início</a>
-    <a href="#videos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m10 8 6 4-6 4Z"/></svg>Vídeos</a>
-    <a href="#design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>Design</a>
-    <a href="#identidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg>Marcas</a>
-    <a href="#contato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5Z"/></svg>Contato</a>
-  </nav>
-
-  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-panel">
-      <button class="modal-close" id="modal-close" aria-label="Fechar visualização"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
-      <div class="modal-media" id="modal-media"></div>
-      <div class="modal-caption"><h3 id="modal-title"></h3><p id="modal-description"></p></div>
-    </div>
-  </div>
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 39c-7.4 0-13-4.5-13-10.4 0-4.6 3.4-7.5 7.2-7.5 2.7 0 4.1 1.8 5.8 1.8s3.1-1.8 5.8-1.8c3.8 0 7.2 2.9 7.2 7.5C37 34.5 31.4 39 24 39Z"/><ellipse cx="11.5" cy="14.5" rx="5.3" ry="7" transform="rotate(-24 11.5 14.5)"/><ellipse cx="23.5" cy="10.5" rx="5.3" ry="7" transform="rotate(-4 23.5 10.5)"/><ellipse cx="35.8" cy="14.5" rx="5.3" ry="7" transform="rotate(24 35.8 14.5)"/></svg></span><span class="brand-word">pata<span>&</span>pelo<small>pet shop com carinho</small></span></a><p>Feito para quem ama sem medida. <span>♡</span></p><small>© <span id="current-year"></span> Pata & Pelo. Todos os direitos reservados.</small></footer>
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Sua sacola" aria-hidden="true">
+    <div class="cart-header"><div><span class="eyebrow">SUA ESCOLHA</span><h2>Sacolinha <em>do bem.</em></h2></div><button class="icon-button" id="cart-close" aria-label="Fechar sacola">×</button></div>
+    <div class="cart-items" id="cart-items"><div class="cart-empty"><span>🐾</span><h3>Sua sacolinha está vazia.</h3><p>Tem muita coisa boa esperando por vocês.</p><button class="button button-dark" id="continue-shopping">Explorar produtos</button></div></div>
+    <div class="cart-summary" id="cart-summary" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div><p class="shipping-note">Frete e entrega combinados no atendimento.</p><button class="button button-dark checkout-button" id="checkout-button">Finalizar pelo WhatsApp <span>↗</span></button></div>
+  </aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script>
-    /*
-      CONTEÚDO DO PORTFÓLIO
-      1. Coloque a foto em public/media/profile/saad.jpg e informe o caminho em PROFILE_IMAGE.
-      2. Substitua cover e video dos vídeos por caminhos locais, por exemplo /media/videos/projeto-01.webp.
-      3. Substitua image das artes. Os itens sem imagem exibem placeholders intencionais.
-      4. Adicione marcas reais em identities, sem usar nomes fictícios como portfólio.
-      5. Configure WHATSAPP_NUMBER com DDI + DDD + número, somente dígitos.
-    */
-    const CONFIG = {
-      PROFILE_IMAGE: "",
-      WHATSAPP_NUMBER: "", // Pendente: não inventar número.
-      WHATSAPP_MESSAGE: "Olá, Saad! Conheci seu portfólio e gostaria de conversar sobre um projeto.",
-      INSTAGRAM_URL: "https://instagram.com/saadcamily"
-    };
-
-    const videos = [
-      {id:"video-01",title:"Projeto audiovisual 01",category:"Captação · Direção · Edição",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-02",title:"Projeto audiovisual 02",category:"Conteúdo para marcas",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-03",title:"Projeto audiovisual 03",category:"Reels · Social media",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-04",title:"Projeto audiovisual 04",category:"Captação · Edição",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-05",title:"Projeto audiovisual 05",category:"Vídeo institucional",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-06",title:"Projeto audiovisual 06",category:"Campanha digital",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-07",title:"Projeto audiovisual 07",category:"Conteúdo vertical",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."},
-      {id:"video-08",title:"Projeto audiovisual 08",category:"Direção criativa",cover:"",video:"",description:"Adicione aqui uma descrição breve do projeto."}
-    ];
-    const designs = [
-      {id:"design-01",title:"Peça de design 01",category:"Design gráfico",image:""},
-      {id:"design-02",title:"Peça de design 02",category:"Social media",image:""},
-      {id:"design-03",title:"Peça de design 03",category:"Campanha",image:""},
-      {id:"design-04",title:"Peça de design 04",category:"Design gráfico",image:""},
-      {id:"design-05",title:"Peça de design 05",category:"Social media",image:""},
-      {id:"design-06",title:"Peça de design 06",category:"Direção de arte",image:""},
-      {id:"design-07",title:"Peça de design 07",category:"Design gráfico",image:""},
-      {id:"design-08",title:"Peça de design 08",category:"Campanha",image:""},
-      {id:"design-09",title:"Peça de design 09",category:"Social media",image:""},
-      {id:"design-10",title:"Peça de design 10",category:"Design gráfico",image:""}
-    ];
-    const identities = []; // Adicione aqui projetos reais de identidade visual.
-    const $ = (selector, root=document) => root.querySelector(selector);
-    const esc = (value) => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
-    const fallback = (label, index, kind="design") => {
-      const title = esc(label || (kind === "video" ? "SEU VÍDEO AQUI" : "SEU PROJETO AQUI"));
-      return '<div class="'+(kind==="video"?"placeholder-art":"design-placeholder")+'"><div class="'+(kind==="video"?"placeholder-top":"small")+'"><span>SAAD / PORTFÓLIO</span><span>'+String(index+1).padStart(2,"0")+'</span></div><div class="'+(kind==="video"?"placeholder-word":"big")+'">'+title+'</div><div class="'+(kind==="video"?"placeholder-bottom":"index")+'"><span>ARQUIVO A ADICIONAR</span><span>20'+(24+index%3)+'</span></div></div>';
-    };
-    function renderVideos(){
-      $("#video-grid").innerHTML = videos.map((item,i) => '<article class="video-card"><div class="media-tile" data-video-card="'+esc(item.id)+'">'+
-        (item.cover ? '<img src="'+esc(item.cover)+'" alt="Capa de '+esc(item.title)+'" loading="lazy">' : fallback("VÍDEO "+String(i+1).padStart(2,"0"),i,"video"))+
-        (item.video ? '<video data-src="'+esc(item.video)+'" muted playsinline loop preload="none" poster="'+esc(item.cover||"")+'" aria-label="Prévia de '+esc(item.title)+'"></video>' : '')+
-        '<span class="play-chip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 6 9 6-9 6Z"/></svg></span>'+
-        '<button class="tile-open" data-open-video="'+esc(item.id)+'" aria-label="Abrir '+esc(item.title)+'"></button></div><div class="video-info"><p class="video-title">'+esc(item.title)+'</p><div class="video-category">'+esc(item.category)+'</div></div></article>').join("");
-    }
-    function renderDesigns(){
-      $("#design-rail").innerHTML = designs.map((item,i) => '<article class="design-card"><button class="design-image" data-open-design="'+esc(item.id)+'" aria-label="Ampliar '+esc(item.title)+'">'+
-        (item.image ? '<img src="'+esc(item.image)+'" alt="'+esc(item.title)+'" loading="lazy">' : fallback("DESIGN "+String(i+1).padStart(2,"0"),i))+
-        '</button><div class="design-meta"><strong>'+esc(item.title)+'</strong><p>'+esc(item.category)+'</p></div></article>').join("");
-    }
-    function renderIdentities(){
-      if(!identities.length){
-        $("#identity-grid").innerHTML = '<div class="identity-placeholder"><span class="plus">+</span><div><strong>Seu próximo projeto de marca</strong><p>Esta área está pronta para receber identidades visuais reais, com logotipo, paleta, tipografia e aplicações.</p></div></div><div class="identity-placeholder"><span class="plus">+</span><div><strong>Do conceito às aplicações</strong><p>Adicione projetos no array <code>identities</code> do arquivo index.html. Nenhuma marca fictícia será exibida como trabalho real.</p></div></div>';
-        return;
-      }
-      $("#identity-grid").innerHTML = identities.map((item,i)=>'<article class="identity-card"><div class="identity-visual">'+(item.logoImage?'<img src="'+esc(item.logoImage)+'" alt="Logotipo '+esc(item.name)+'" loading="lazy">':'<div class="identity-logo">'+esc(item.name)+'<small>IDENTIDADE VISUAL</small></div>')+'</div><div class="identity-details"><span class="number">MARCA / '+String(i+1).padStart(2,"0")+'</span><h3>'+esc(item.name)+'</h3><p>'+esc(item.description||"Sistema visual e aplicações de marca.")+'</p><div class="palette">'+(item.colors||["#0b1118","#72e5ff","#f1f5f8"]).map(c=>'<span class="swatch" style="background:'+esc(c)+'" title="'+esc(c)+'"></span>').join("")+'</div></div></article>').join("");
-    }
-    const modal = $("#project-modal");
-    let lastFocus = null;
-    function openModal({title,description="",image="",video="",fallbackText=""}){
-      lastFocus=document.activeElement;
-      $("#modal-title").textContent=title;
-      $("#modal-description").textContent=description;
-      const media=$("#modal-media");
-      if(video){
-        media.innerHTML='<video controls playsinline preload="metadata"'+(image?' poster="'+esc(image)+'"':'')+'><source src="'+esc(video)+'"><p>Seu navegador não consegue reproduzir este vídeo.</p></video>';
-      } else if(image){
-        media.innerHTML='<img src="'+esc(image)+'" alt="'+esc(title)+'">';
-      } else {
-        media.innerHTML='<div class="modal-placeholder"><div><p>PRÉVIA DO PORTFÓLIO</p><strong>'+esc(fallbackText||title)+'</strong><p>Substitua pelo arquivo do projeto</p></div></div>';
-      }
-      modal.classList.add("open");
-      document.body.style.overflow="hidden";
-      $("#modal-close").focus();
-    }
-    function closeModal(){
-      const activeVideo=$("video",$("#modal-media"));
-      if(activeVideo) activeVideo.pause();
-      modal.classList.remove("open");
-      document.body.style.overflow="";
-      $("#modal-media").innerHTML="";
-      if(lastFocus && lastFocus.focus) lastFocus.focus();
-    }
-    $("#modal-close").addEventListener("click",closeModal);
-    modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
-    document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))closeModal()});
-    document.addEventListener("click",e=>{
-      const videoButton=e.target.closest("[data-open-video]");
-      const designButton=e.target.closest("[data-open-design]");
-      if(videoButton){
-        const item=videos.find(v=>v.id===videoButton.dataset.openVideo);
-        if(item)openModal({title:item.title,description:item.description||item.category,image:item.cover,video:item.video,fallbackText:"VÍDEO"});
-      }
-      if(designButton){
-        const item=designs.find(d=>d.id===designButton.dataset.openDesign);
-        if(item)openModal({title:item.title,description:item.category,image:item.image,fallbackText:"DESIGN"});
-      }
-    });
-    document.querySelectorAll("[data-scroll]").forEach(button=>button.addEventListener("click",()=>{
-      const rail=$("#"+button.dataset.scroll);
-      rail.scrollBy({left:Number(button.dataset.dir)*Math.max(rail.clientWidth*.75,230),behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
-    }));
-    // Prévia de vídeo: só carrega e reproduz quando o card está visível.
-    const videoObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        const video=$("video[data-src]",entry.target);
-        if(!video)return;
-        if(entry.isIntersecting && !matchMedia("(prefers-reduced-motion: reduce)").matches && navigator.connection?.saveData!==true){
-          if(!video.src){video.src=video.dataset.src;video.load()}
-          video.muted=true;
-          const playPromise=video.play();
-          if(playPromise?.catch)playPromise.catch(()=>{});
-        }else video.pause();
-      });
-    },{rootMargin:"100px 0px",threshold:.35}) : null;
-    renderVideos();renderDesigns();renderIdentities();
-    if(CONFIG.PROFILE_IMAGE){
-      const avatar=$("#profile-avatar");
-      avatar.innerHTML='<img src="'+esc(CONFIG.PROFILE_IMAGE)+'" alt="Foto de perfil de Saad" onerror="this.parentElement.textContent=\'ADICIONE SUA FOTO\'">';
-    }
-    if(CONFIG.WHATSAPP_NUMBER){
-      $("#whatsapp-link").href="https://wa.me/"+CONFIG.WHATSAPP_NUMBER.replace(/\D/g,"")+"?text="+encodeURIComponent(CONFIG.WHATSAPP_MESSAGE);
-      $("#whatsapp-link").target="_blank";
-      $("#whatsapp-link").rel="noreferrer";
-    }else{
-      $("#whatsapp-link").addEventListener("click",e=>{e.preventDefault();const toast=$("#toast");toast.textContent="Configure o número do WhatsApp em CONFIG no index.html.";toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),3200)});
-    }
-    $("#year").textContent=new Date().getFullYear();
-    if(videoObserver)document.querySelectorAll("[data-video-card]").forEach(card=>videoObserver.observe(card));
-    // Atualiza o estado visual da navegação sem dependências extras.
-    if("IntersectionObserver" in window){
-      const sections=[...document.querySelectorAll("main section[id],main[id]")];
-      const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          document.querySelectorAll('.nav a[aria-current="location"],.mobile-nav a[aria-current="location"]').forEach(a=>a.removeAttribute("aria-current"));
-          document.querySelectorAll('a[href="#'+entry.target.id+'"]').forEach(a=>a.setAttribute("aria-current","location"));
-        }
-      }),{rootMargin:"-25% 0px -65% 0px"});
-      sections.forEach(section=>sectionObserver.observe(section));
-    }
-  </script>
 </body>
 </html>
