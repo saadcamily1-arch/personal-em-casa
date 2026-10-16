@@ -1,12 +1,20 @@
-# Saad Designer | Portfólio
+# Pata & Pelo | Página de vendas para pet shop
 
-Portfólio de página única para apresentar os trabalhos de design gráfico, identidade visual e audiovisual. A página atual usa HTML, CSS e JavaScript nativos, sem etapa de build.
+Este repositório foi adaptado para uma landing page demonstrativa de pet shop. A identidade usa tons de verde, creme e laranja, com foco em produtos, benefícios, sacola de compras e contato.
 
-## Estrutura do projeto
+## Estrutura
 
 ```
 .
 ├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── products.js
+│   └── app.js
+├── assets/
+│   └── images/
+│       └── README.md
 ├── media/
 │   ├── README.md
 │   ├── profile/
@@ -16,34 +24,50 @@ Portfólio de página única para apresentar os trabalhos de design gráfico, id
 └── README.md
 ```
 
-As pastas de mídia já estão versionadas no GitHub. Adicione os arquivos reais dentro delas.
+As pastas `media/` anteriores foram mantidas para não apagar arquivos ou trabalho já existente. A página atual utiliza os diretórios `css/` e `js/`.
 
-## Como visualizar
+## Visualizar
 
-Abra `index.html` no navegador ou publique a página com GitHub Pages. Para trabalhar pelo Lovable, conecte este repositório à sua conta e confirme a estrutura que o Lovable importar antes de publicar.
+Abra `index.html` em um navegador ou publique o repositório com GitHub Pages. A página usa imagens remotas do Unsplash e fontes do Google Fonts, então esses elementos precisam de conexão com a internet.
 
-## Personalizar o conteúdo
+## Personalização antes de publicar
 
-Os textos, links e dados dos projetos ficam no bloco de configuração e nos arrays no final de `index.html`.
+Esta é uma demonstração visual e funcional, não uma loja real já conectada a estoque, pagamentos ou entregas. O nome Pata & Pelo, produtos, imagens, avaliações, preços e condições promocionais são exemplos e precisam ser substituídos ou confirmados pelo responsável pela loja.
 
-- **Foto de perfil:** adicione `media/profile/saad.jpg` e configure `PROFILE_IMAGE` com o caminho correspondente.
-- **Vídeos:** adicione arquivos e capas em `media/videos/`, depois atualize o array `videos` com `title`, `category`, `cover`, `video` e `description`.
-- **Design gráfico:** adicione as imagens em `media/design/` e atualize o array `designs`.
-- **Identidades visuais:** adicione logos e aplicações em `media/identities/` e atualize o array `identities`.
-- **WhatsApp:** configure `WHATSAPP_NUMBER` com código do país, DDD e número, somente dígitos.
-- **Instagram:** atualize `CONFIG.INSTAGRAM_URL` e os links visíveis correspondentes.
+### Produtos e preços
 
-Use caminhos consistentes com o local onde o site será publicado. Em GitHub Pages, um site publicado em uma URL de projeto pode precisar de caminhos relativos em vez de caminhos iniciados por `/`.
+Edite `js/products.js`. Cada produto contém:
+- `id`: identificador único.
+- `name`: nome.
+- `category` e `categoryLabel`: categoria para filtros.
+- `price` e `oldPrice`: valores em reais.
+- `badge`: etiqueta do produto.
+- `rating`: texto de avaliação, que deve ser confirmado ou removido se não houver avaliações reais.
+- `image` e `alt`: imagem e descrição acessível.
 
-## Recursos atuais
+### WhatsApp
 
-- Layout responsivo.
-- Navegação por seções e navegação inferior em telas pequenas.
-- Grade de projetos audiovisuais com prévia sob demanda quando um vídeo estiver configurado.
-- Carrossel de design gráfico com visualização ampliada.
-- Seção para identidades visuais reais.
-- Modal com fechamento por botão, clique fora e tecla Escape.
-- Respeito à preferência por movimento reduzido.
-- Link de WhatsApp preparado para ser configurado.
+Edite `js/app.js` e preencha `WHATSAPP_NUMBER` com o número real da loja, incluindo DDI e DDD, apenas dígitos. Enquanto estiver vazio, o site avisa que o número precisa ser configurado e não cria um contato falso.
 
-Os espaços visuais de demonstração são placeholders, não trabalhos reais. Substitua-os pelos projetos e materiais autorizados antes de divulgar o portfólio.
+### Identidade e textos
+
+Edite os textos em `index.html` e os estilos em `css/styles.css`. Os arquivos estão separados para facilitar a manutenção.
+
+## Funcionalidades
+
+- Layout responsivo para computador e celular.
+- Navegação por categorias.
+- Catálogo gerado a partir de um arquivo de dados.
+- Sacola com inclusão, remoção e alteração de quantidades.
+- Cálculo local do subtotal.
+- Montagem de pedido para envio ao WhatsApp após configurar o número.
+- Estados vazios e mensagens de feedback.
+- Preferência de movimento reduzido respeitada.
+
+## Limitações importantes
+
+- Não existe pagamento online nem integração com estoque.
+- Frete, prazo e pagamento precisam ser combinados com a loja.
+- O checkout depende do número de WhatsApp real.
+- Confirme preços, disponibilidade, promoções, avaliações, imagens e políticas antes de publicar.
+- Os arquivos de mídia legados foram mantidos, mas não são utilizados pela página de pet shop.
