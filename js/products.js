@@ -1,0 +1,9 @@
+// Catálogo demonstrativo. Edite nomes, preços, categorias e imagens conforme o estoque real da loja.
+window.PETSHOP_PRODUCTS = [
+ {id:"pote-ceramica",name:"Comedouro de cerâmica",category:"alimentacao",categoryLabel:"Alimentação",price:49.90,oldPrice:59.90,badge:"Queridinho",rating:"★ 4,9",image:"https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=800&q=80",alt:"Acessórios e itens para pets"},
+ {id:"bolinha-interativa",name:"Kit de bolinhas divertidas",category:"brinquedos",categoryLabel:"Brinquedos",price:29.90,oldPrice:null,badge:"Hora de brincar",rating:"★ 4,8",image:"https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=800&q=80",alt:"Cachorro brincando"},
+ {id:"guia-passeio",name:"Guia para passeios leves",category:"passeio",categoryLabel:"Passeio",price:64.90,oldPrice:74.90,badge:"Novo favorito",rating:"★ 5,0",image:"https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=800&q=80",alt:"Cachorro pronto para passear"},
+ {id:"escova-cuidado",name:"Escova de cuidado diário",category:"higiene",categoryLabel:"Higiene & cuidado",price:34.90,oldPrice:null,badge:"Cuidado diário",rating:"★ 4,9",image:"https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80",alt:"Momento de cuidado com um cachorro"},
+ {id:"brinquedo-corda",name:"Corda para brincar junto",category:"brinquedos",categoryLabel:"Brinquedos",price:24.90,oldPrice:null,badge:"Diversão garantida",rating:"★ 4,8",image:"https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80",alt:"Dois cães brincando ao ar livre"},
+ {id:"kit-passeio",name:"Kit passeio do melhor amigo",category:"passeio",categoryLabel:"Passeio",price:89.90,oldPrice:99.90,badge:"Kit especial",rating:"★ 5,0",image:"https://images.unsplash.com/photo-1601758123927-196b0a2b8d35?auto=format&fit=crop&w=800&q=80",alt:"Cachorro aproveitando um momento com sua pessoa"}
+];
