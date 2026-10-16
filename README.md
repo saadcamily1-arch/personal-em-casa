@@ -6,7 +6,7 @@ Portfólio de página única para apresentar os trabalhos de design gráfico e a
 Abra `index.html` no navegador ou publique o repositório com GitHub Pages. As fontes Manrope e DM Mono são carregadas do Google Fonts; se estiver offline, entram fontes de sistema como alternativa.
 
 ## Personalizar o conteúdo
-Todo o conteúdo editável fica no bloco `CONTEÚDO DO PORTFÓLIO), no fim de `index.html`.
+Todo o conteúdo editável fica no bloco de configuração e dados do portfólio, no fim de `index.html`.
 
 - **Foto de perfil:** coloque a foto em `public/media/profile/saad.jpg` e defina `PROFILE_IMAGE: "/media/profile/saad.jpg"` em `CONFIG`. Se preferir, use outro caminho.
 - **Vídeos:** edite o array `videos`. Cada item aceita `title`, `category`, `cover`, `video` e `description`. Use caminhos como `/media/videos/projeto-01.webp` e `/media/videos/projeto-01.mp4`.
